@@ -15,7 +15,13 @@ export default function Index() {
 
     const novaTarefa: Tarefa = {
       texto: inputValue,
-      dataHora: new Date().toLocaleString("pt-BR"),
+      dataHora: new Date().toLocaleString("pt-BR", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      }),
     };
 
     setInputList([...inputList, novaTarefa]);
@@ -59,7 +65,7 @@ export default function Index() {
             style={{ 
               backgroundColor: "#424242", 
               padding: 10, 
-              borderRadius: 5, 
+              borderRadius: 5,
               marginBottom: 10,
               elevation: 2
             }}
