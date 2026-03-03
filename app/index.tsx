@@ -28,7 +28,7 @@ export default function Index() {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "skyblue",
+        backgroundColor: "#242424",
         paddingTop: 50,
       }}
     >
@@ -37,35 +37,35 @@ export default function Index() {
         value={inputValue}
         onChangeText={setInputValue}
         style={{
-          borderWidth: 1,
           padding: 10,
-          width: "80%",
+          width: "60%",
           marginBottom: 10,
           borderRadius: 5,
-          backgroundColor: "white",
+          backgroundColor: "#424242",
+          color: "#ECECEC",
         }}
       />
 
       <TouchableOpacity
         onPress={appendInput}
-        style={{ padding: 15, backgroundColor: "black", borderRadius: 10, marginBottom: 20 }}
+        style={{ padding: 15, backgroundColor: "#424242", borderRadius: 10, marginBottom: 20 }}
       >
         <Text style={{ color: "white", fontWeight: "bold" }}>Adicionar Tarefa</Text>
       </TouchableOpacity>
-      <ScrollView style={{ width: "80%" }}>
+      <ScrollView style={{ width: "60%" }}>
         {inputList.map((item, index) => (
           <View 
             key={index} 
             style={{ 
-              backgroundColor: "white", 
+              backgroundColor: "#424242", 
               padding: 10, 
               borderRadius: 5, 
               marginBottom: 10,
               elevation: 2
             }}
           >
-            <Text style={{ fontSize: 16, fontWeight: "bold" }}>Tarefa: {item.texto}</Text>
-            <Text style={{ fontSize: 12, color: "gray" }}>Criado em: {item.dataHora}</Text>
+            <Text style={{ fontSize: 16, fontWeight: "bold", color: "#ffffff" }}>Tarefa: {item.texto}</Text>
+            <Text style={{ fontSize: 12, color: "#a5a5a5" }}>Criado em: {item.dataHora}</Text>
           </View>
         ))}
       </ScrollView>
